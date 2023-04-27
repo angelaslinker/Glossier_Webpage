@@ -1,4 +1,4 @@
-# Glossier Webpage
+# Glossier Webpage (Actively In Progress) 
 
 ### This is my personal take on the Glossier webpage, created using HTML, CSS, and JavaScript. The project showcases my skills in front-end web development, including responsive design, user interface (UI) design, and web accessibility.
 
