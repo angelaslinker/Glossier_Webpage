@@ -16,7 +16,7 @@
 ### CSS
 ### JavaScript
 
-##Usage
+## Usage
 
 ### To view the webpage, simply open the index.html file in your web browser.
 
