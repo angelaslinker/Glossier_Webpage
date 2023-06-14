@@ -18,8 +18,7 @@ function addItem(index) {
 
 
 (async function () {
-  try
-  {
+  try {
     const response = await fetch('./json/products.json');
     const data = await response.json();
     // Filter products by ID
@@ -33,7 +32,8 @@ function addItem(index) {
     const stock1 = [
       item1.querySelector("img").src = product1.image_link,
       item1.querySelector("h2").textContent = product1.name,
-      item1.querySelector("p").textContent = `$${product1.price}`];
+      item1.querySelector("p").textContent = `$${product1.price}`,
+      item1.querySelector("section").textContent = product1.description];
     product.push(stock1);
 
 
@@ -41,26 +41,29 @@ function addItem(index) {
     const stock2 = [
       item2.querySelector("img").src = product2.image_link,
       item2.querySelector("h2").textContent = product2.name,
-      item2.querySelector("p").textContent = `$${product2.price}`];
+      item2.querySelector("p").textContent = `$${product2.price}`,
+      item2.querySelector("section").textContent = product2.description];
+
     product.push(stock2);
 
     const item3 = document.querySelector(".product3");
     const stock3 = [
       item3.querySelector("img").src = product3.image_link,
       item3.querySelector("h2").textContent = product3.name,
-      item3.querySelector("p").textContent = `$${product3.price}`];
+      item3.querySelector("p").textContent = `$${product3.price}`,
+      item3.querySelector("section").textContent = product3.description];
     product.push(stock3);
 
     const item4 = document.querySelector(".product4");
     const stock4 = [
       item4.querySelector("img").src = product4.image_link,
       item4.querySelector("h2").textContent = product4.name,
-      item4.querySelector("p").textContent = `$${product4.price}`];
+      item4.querySelector("p").textContent = `$${product4.price}`,
+      item4.querySelector("section").textContent = product4.description];
     product.push(stock4);
 
 
-  } catch (error)
-  {
+  } catch (error) {
     console.error(error);
   }
 })();
