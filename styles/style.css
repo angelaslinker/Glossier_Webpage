@@ -1,3 +1,47 @@
+/* @media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5em;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    max-width: 90%;
+    padding: 20px;
+    align-content: center;
+
+  }
+
+  section {
+    padding: 1em;
+  }
+
+  section h2,
+  p {
+    padding: 20px;
+  }
+
+  .carousel {
+    margin: 10px;
+  }
+} */
+
+/*Variables*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -27,8 +71,8 @@ nav ul li {
     max-width: 90%;
     max-height: 50vh;
     margin: 20px;
-}
 
+}
 
 .container {
     display: grid;
@@ -40,7 +84,18 @@ section {
     margin: 1em;
     height: fit-content;
     /* background-color: #F4f3f5; */
+}
 
+.introduction .bestsellers h1 {
+    /* set the color of the whole heading to black */
+    color: black;
+    /* apply the accent color to the selected text */
+}
+
+.introduction .bestsellers h1 .accent-color {
+    color: #FFC0CB;
+    background-color: transparent;
+    /* optional: make the background transparent */
 }
 
 button {
@@ -56,25 +111,74 @@ button {
 }
 
 /* button:hover {
-    box-shadow: 5px 5px 5px 0px #89747D;
-} */
-
+      box-shadow: 5px 5px 5px 0px #89747D;
+  } */
 section h2,
 p {
     padding-bottom: 10px;
     margin: 0;
     text-align: center;
-    font-family: 'Inter Tight', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Inter Tight", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
+/* section section {
+    display: none;
+  } */
+
+/* Add transition property to images */
 .img1,
 .img2,
 .img3,
 .img4 {
+    opacity: 1;
+    display: block;
     max-width: 350px;
     padding: 40px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.product-description {
+    transition: .5s ease;
+    opacity: 0;
+    left: 50%;
+    right: 40%;
+    padding-bottom: 500px;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+}
+
+#product-container:hover .product-img {
+    opacity: 0.3;
+
+}
+
+#product-container:hover .product-description {
+    opacity: 1;
+}
+
+#checkout-btn {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Move image up on hover */
+#checkout-btn:hover {
+    transform: translateY(-10px);
+}
+
+section section {
+    text-align: center;
+    font-family: "Inter Tight", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #FFC0CB;
+    font-weight: bold;
+    width: 50%;
 }
 
 .introduction {
@@ -86,20 +190,17 @@ p {
 }
 
 /* .movie {
-    margin-top: 20px;
-} */
-
-
+      margin-top: 20px;
+  } */
 .bestsellers {
     width: 20%;
     margin: 1em;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 2em;
 }
 
-
 footer {
-    background-color: #F7dfea;
+    background-color: #FFC0CB;
     text-align: center;
     margin: 0 auto;
 }
@@ -156,4 +257,55 @@ footer {
 .introimg img {
     max-width: 80%;
     margin: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
+        background-color: white;
+        margin-bottom: 2em;
+    }
+
+    nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-rows: 0;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;
+        margin: 0;
+        padding-bottom: 3em;
+
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+
+    .logo {
+        margin-right: auto;
+        height: 100%;
+    }
+
+    .introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .introduction .bestsellers {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    video {
+        width: 30em;
+    }
 }

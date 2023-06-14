@@ -30,15 +30,13 @@ function updateCart() {
     const cart = JSON.parse(products);
 
     // If the cart is empty, show the "empty" message
-    if (!cart || cart.length === 0)
-    {
+    if (!cart || cart.length === 0) {
         isEmptyDiv.style.display = "block";
         return;
     }
 
     // Loop through the cart items and create a new element for each one
-    for (let i = 0; i < cart.length; i++)
-    {
+    for (let i = 0; i < cart.length; i++) {
         let image = cart[i][0];
         let name = cart[i][1];
         let price = cart[i][2];
@@ -68,7 +66,6 @@ function updateCart() {
 
 
 // If the cart is empty, show the "empty" message
-if (cartItems.length === 0)
-{
+if (cartItems.length === 0) {
     isEmptyDiv.style.display = "block";
 }

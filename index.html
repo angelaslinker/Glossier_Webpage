@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Page Title</title>
   <link rel="stylesheet" href="./styles/style.css" />
-  <link rel="stylesheet" href="./styles/small.css" />
   <script type="text/javascript" src="./js/product.js"></script>
+  <script src="./js/movie.js"></script>
   <script type="module" src="./js/create-cart.js"></script>
   <script type="module" src="./js/carousel.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,7 @@
 
 
 </head>
-
-<body>
+<header>
   <nav class="nav">
     <img class="logo" src="./images/letterlogo.jpg" />
     <ul>
@@ -29,6 +28,10 @@
 
     </ul>
   </nav>
+</header>
+
+<body>
+
   <main>
     <dialog id="cart-dialog">
       <h1>My Cart</h1>
@@ -45,11 +48,11 @@
 
     <section class="introduction">
       <div class="bestsellers">
-        <h1>Glossier You </h1>
-        <h1>The ultimate personal fragrance.</h1>
+        <h1>Glossier <span class="accent-color">You</span> </h1>
+        <h1>The ultimate personal fragrance</h1>
       </div>
       <div class="movie">
-        <video width="640" height="360" controls>
+        <video height="360" controls>
           <source src="./video/glossier_movie.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -57,27 +60,46 @@
     </section>
 
     <div class="container">
-      <section class="item1">
+      <section class="item1" id="product-container">
         <div class="product1">
-          <img class="img1" />
+          <div class="product-img">
+            <img class="img1" />
+          </div>
+          <div class="product-description">
+
+            <section class="description1"></section>
+
+          </div>
+
+          <!-- <section class="description1"></section> -->
           <h2>Item Name</h2>
           <p>Item Price</p>
         </div>
         <button id="checkout-btn" class="button1" onclick="addItem(0)">Add to cart</button>
       </section>
 
-      <section class="item2">
+      <section class="item2" id="product-container">
         <div class="product2">
-          <img class="img2" />
+          <div class="product-img">
+            <img class="img2" />
+          </div>
+          <div class="product-description">
+            <section class="description2"></section>
+          </div>
           <h2>Item Name</h2>
           <p>Item Price</p>
         </div>
         <button id="checkout-btn" class="button2" onclick="addItem(1)">Add to cart</button>
       </section>
 
-      <section class="item3">
+      <section class="item3" id="product-container">
         <div class="product3">
-          <img class="img3" />
+          <div class="product-img">
+            <img class="img3" />
+          </div>
+          <div class="product-description">
+            <section class="description3"></section>
+          </div>
           <h2>Item Name</h2>
           <p>Item Price</p>
         </div>
@@ -85,9 +107,14 @@
 
       </section>
 
-      <section class="item4">
+      <section class="item4" id="product-container">
         <div class="product4">
-          <img class="img4" />
+          <div class="product-img">
+            <img class="img4" />
+          </div>
+          <div class="product-description">
+            <section class="description4"></section>
+          </div>
           <h2>Item Name</h2>
           <p>Item Price</p>
         </div>
