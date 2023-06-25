@@ -140,11 +140,18 @@ p {
     backface-visibility: hidden;
 }
 
+.product1,
+.product2,
+.product3,
+.product4 {
+    position: relative;
+}
+
+
 .product-description {
     transition: .5s ease;
     opacity: 0;
-    left: 50%;
-    right: 40%;
+    left: 250px;
     padding-bottom: 500px;
     position: absolute;
     text-align: center;
@@ -163,6 +170,7 @@ p {
 }
 
 #checkout-btn {
+    position: relative;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -176,7 +184,7 @@ section section {
     font-family: "Inter Tight", sans-serif;
     font-family: "Roboto", sans-serif;
     font-family: "Source Sans Pro", sans-serif;
-    color: #FFC0CB;
+    color: black;
     font-weight: bold;
     width: 50%;
 }
