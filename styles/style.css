@@ -147,43 +147,30 @@ p {
     position: relative;
 }
 
-.description1,
-.description2,
-.description3,
-.description4 {
-    color: black !important;
-
-}
 
 .product-description {
-    display: flex;
-    justify-content: center;
-    text-align: center;
     transition: .5s ease;
     opacity: 0;
-    left: 210px;
+    left: 250px;
+    padding-bottom: 500px;
+    position: absolute;
+    text-align: center;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    position: absolute;
-    width: 100%;
-    height: 100%;
 
 }
 
-
-
-
 #product-container:hover .product-img {
-    opacity: 1;
+    opacity: 0.3;
 
 }
 
 #product-container:hover .product-description {
     opacity: 1;
-
 }
 
 #checkout-btn {
+    position: relative;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -197,7 +184,7 @@ section section {
     font-family: "Inter Tight", sans-serif;
     font-family: "Roboto", sans-serif;
     font-family: "Source Sans Pro", sans-serif;
-    color: #FFC0CB;
+    color: black;
     font-weight: bold;
     width: 50%;
 }
