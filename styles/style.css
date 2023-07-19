@@ -43,6 +43,8 @@ nav ul li {
 
 }
 
+
+
 nav ul li::after,
 nav ul li::before {
     content: " ";
@@ -112,6 +114,10 @@ nav ul li {
     margin-left: auto;
 }
 
+.quote {
+    margin: auto;
+    padding-left: 170px;
+}
 
 .logo {
     margin-right: auto;
@@ -341,23 +347,25 @@ footer {
     }
 
     nav {
-        grid-template-columns: repeat(2, 1fr);
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
 
     nav ul {
-        display: grid;
-        grid-template-rows: 0;
-        grid-template-columns: repeat(3, 1fr);
-        list-style: none;
-        margin: 0;
-        padding-bottom: 3em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        margin-left: -690px;
 
     }
 
     nav ul li {
-        padding: 0;
-
+        margin: 0 10px;
     }
+
+
 
     .logo {
         margin-right: auto;
@@ -368,6 +376,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
     .introduction .bestsellers {
@@ -377,5 +386,9 @@ footer {
 
     video {
         width: 30em;
+    }
+
+    .quote {
+        visibility: hidden;
     }
 }
